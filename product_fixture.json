@@ -4,7 +4,7 @@
     "pk": 2,
     "fields": {
         "name": "5 series",
-        "description": "седан Е класса",
+        "description": "",
         "image": "",
         "category": 1,
         "purchase_price": "25000.00",
@@ -17,7 +17,7 @@
     "pk": 3,
     "fields": {
         "name": "7 series",
-        "description": "седан Ф класса",
+        "description": "",
         "image": "",
         "category": 1,
         "purchase_price": "35000.00",
@@ -30,7 +30,7 @@
     "pk": 5,
     "fields": {
         "name": "Mondeo",
-        "description": "седан С класса",
+        "description": "",
         "image": "",
         "category": 2,
         "purchase_price": "12000.00",
@@ -43,7 +43,7 @@
     "pk": 6,
     "fields": {
         "name": "Mustang",
-        "description": "купе С класса",
+        "description": "",
         "image": "",
         "category": 2,
         "purchase_price": "18000.00",
@@ -55,8 +55,8 @@
     "model": "catalog.product",
     "pk": 7,
     "fields": {
-        "name": "Нива Travel",
-        "description": "внедорожник",
+        "name": "РќРёРІР° Travel",
+        "description": "",
         "image": "",
         "category": 3,
         "purchase_price": "10000.00",

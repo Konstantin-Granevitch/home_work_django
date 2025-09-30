@@ -4,7 +4,7 @@
     "pk": 1,
     "fields": {
         "name": "BMW",
-        "description": "немецкий производитель автомобилей"
+        "description": ""
     }
 },
 {
@@ -12,15 +12,15 @@
     "pk": 2,
     "fields": {
         "name": "Ford",
-        "description": "американский производитель автомобилей"
+        "description": ""
     }
 },
 {
     "model": "catalog.category",
     "pk": 3,
     "fields": {
-        "name": "ВАЗ",
-        "description": "российский производитель автомобилей"
+        "name": "Р’РђР—",
+        "description": ""
     }
 }
 ]
