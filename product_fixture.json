@@ -1,0 +1,67 @@
+[
+{
+    "model": "catalog.product",
+    "pk": 2,
+    "fields": {
+        "name": "5 series",
+        "description": "седан Е класса",
+        "image": "",
+        "category": 1,
+        "purchase_price": "25000.00",
+        "created_at": "2025-09-30",
+        "updated_at": "2025-09-30"
+    }
+},
+{
+    "model": "catalog.product",
+    "pk": 3,
+    "fields": {
+        "name": "7 series",
+        "description": "седан Ф класса",
+        "image": "",
+        "category": 1,
+        "purchase_price": "35000.00",
+        "created_at": "2025-09-30",
+        "updated_at": "2025-09-30"
+    }
+},
+{
+    "model": "catalog.product",
+    "pk": 5,
+    "fields": {
+        "name": "Mondeo",
+        "description": "седан С класса",
+        "image": "",
+        "category": 2,
+        "purchase_price": "12000.00",
+        "created_at": "2025-09-30",
+        "updated_at": "2025-09-30"
+    }
+},
+{
+    "model": "catalog.product",
+    "pk": 6,
+    "fields": {
+        "name": "Mustang",
+        "description": "купе С класса",
+        "image": "",
+        "category": 2,
+        "purchase_price": "18000.00",
+        "created_at": "2025-09-30",
+        "updated_at": "2025-09-30"
+    }
+},
+{
+    "model": "catalog.product",
+    "pk": 7,
+    "fields": {
+        "name": "Нива Travel",
+        "description": "внедорожник",
+        "image": "",
+        "category": 3,
+        "purchase_price": "10000.00",
+        "created_at": "2025-09-30",
+        "updated_at": "2025-09-30"
+    }
+}
+]
