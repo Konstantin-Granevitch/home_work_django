@@ -40,6 +40,23 @@
                 </div>
             </div>
         </div>
+        <div class ="col-6">
+            <div class="card mb-4 box-shadow">
+                <div class="card-header">
+                    <h4 class="my-0 font-weight-normal">Список товаров</h4>
+                </div>
+                <div class="card-body">
+                    {% for product in product_list %}
+                        <ul class="list">
+                            <li class="list-group-item">{{ product.category }}</li>
+                            <li class="list-group-item">Название товара - {{ product.name }}</li>
+                            <li class="list-group-item">Цена товара - {{ product.purchase_price }}</li>
+                            <li class="list-group-item">Описание товара: {{ product.description|truncatechars:100 }}</li>
+                        </ul>
+                    {% endfor %}
+                </div>
+            </div>
+        </div>
     </div>
 
     <footer class="pt-4 my-md-5 pt-md-5 border-top">
