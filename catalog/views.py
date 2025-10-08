@@ -26,7 +26,7 @@ def contacts_view(request):
         return HttpResponse(f"Запрос успешно выполнен, данные пользователя: {user_name}, {user_phone}, {user_message}")
 
 
-def product_deatil(request, product_id):
+def product_detail(request, product_id):
     """контроллер для вызова страницы с описанием товара"""
 
     product = Product.objects.get(id=product_id)
