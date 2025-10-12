@@ -1,10 +1,10 @@
 {% extends 'base.html' %}
 {% block content %}
     <h1>Детали товара</h1>
-    <p>Категория товара: {{ product.category }}</p>
-    <p>Название товара: {{ product.name }}</p>
-    <p>Цена товара: {{ product.purchase_price }}</p>
-    <p><img src="{{ product.image.url }}" alt="{{ product.name }}"></p>
-    <p>Описание товара: {{ product.description }}</p>
+    <p>Категория товара: {{ object.category }}</p>
+    <p>Название товара: {{ object.name }}</p>
+    <p>Цена товара: {{ object.purchase_price }}</p>
+    <p><img src="{{ object.image.url }}" alt="{{ product.name }}"></p>
+    <p>Описание товара: {{ object.description }}</p>
     {% include 'footer.html' %}
 {% endblock %}
