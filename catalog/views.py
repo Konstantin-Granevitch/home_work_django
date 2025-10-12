@@ -26,10 +26,10 @@ def contacts_view(request):
         return HttpResponse(f"Запрос успешно выполнен, данные пользователя: {user_name}, {user_phone}, {user_message}")
 
 
-def product_detail(request, product_id):
+def product_detail(request, pk):
     """контроллер для вызова страницы с описанием товара"""
 
-    product = Product.objects.get(id=product_id)
+    product = Product.objects.get(id=pk)
     context = {'product': product}
 
     return render(request, 'catalog/product_detail.html', context)
