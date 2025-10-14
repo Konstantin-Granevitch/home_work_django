@@ -1,6 +1,6 @@
 from django.shortcuts import render
-from django.http import HttpResponse, Http404
-from django.views.generic import DetailView, UpdateView, CreateView, DeleteView
+from django.http import HttpResponse
+from django.views.generic import DetailView
 from django.views import View
 
 from .models import Product

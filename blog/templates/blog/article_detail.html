@@ -1,0 +1,9 @@
+{% extends 'blog/base.html' %}
+{% block content %}
+    <h1>Статья</h1>
+    <p>Заголовок: {{ object.title }}</p>
+    <p><img src="{{ object.image.url }}" alt="{{ object.title }}"></p>
+    <p>Содержание статьи: {{ object.content }}</p>
+    <p>Дата публикации: {{ object.created_at }}</p>
+    <p>Количество просмотров: {{ object.num_views }}</p>
+{% endblock %}
