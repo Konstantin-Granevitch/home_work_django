@@ -1,5 +1,6 @@
 from django.shortcuts import render
 from django.http import HttpResponse
+from django.urls import reverse_lazy
 from django.views.generic import DetailView, ListView, CreateView, UpdateView, DeleteView
 
 from.models import Article
@@ -18,12 +19,20 @@ class ArticleDetailView(DetailView):
 
 
 class ArticleCreateView(CreateView):
-    pass
+    model = Article
+    template_name = 'blog/article_form.html'
+    fields = ('title', 'content', 'image')
+    success_url = reverse_lazy('blog: article_list')
 
 
 class ArticleUpdateView(UpdateView):
-    pass
+    model = Article
+    template_name = 'blog/article_form.html'
+    fields = ('title', 'content', 'image')
+    success_url = reverse_lazy('blog: article_list')
 
 
 class ArticleDeleteView(DeleteView):
-    pass
+    model = Article
+    template_name = 'blog/article_confirm_delete.html'
+    success_url = reverse_lazy('blog: article_list')

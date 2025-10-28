@@ -10,6 +10,7 @@
                 <div class="card mb-4 box-shadow">
                     <div class="card-header">
                         <h4 class="my-0 font-weight-normal">Список статей</h4>
+                        <a class="p-2 btn btn-outline-secondary" href="{% url 'blog:article_create' %}">Добавить статью</a>
                     </div>
                     <div class="card-body">
                         {% for article in article_list %}
@@ -17,11 +18,12 @@
                                 <li class="list-group-item">Заголовок статьи - {{ article.title }}</li>
                                 <li class="list-group-item"><img src="{{ article.image.url }}" alt="{{ article.title }}"></li>
                                 <li class="list-group-item">Содержание статьи - {{ article.content|truncatechars:100 }}</li>
-                                <li><a class="p-2 btn btn-outline-primary" href="{% url 'article:article_detail' article.id %}">Подробно</a></li>
+                                <li><a class="p-2 btn btn-outline-primary" href="{% url 'blog:article_detail' article.id %}">Подробно</a></li>
                             </ul>
                         {% endfor %}
                     </div>
                 </div>
             </div>
         </div>
+    </div>
 {% endblock %}
