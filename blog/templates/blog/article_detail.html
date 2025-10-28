@@ -6,5 +6,6 @@
     <p>Содержание статьи: {{ object.content }}</p>
     <p>Дата публикации: {{ object.created_at }}</p>
     <p>Количество просмотров: {{ object.num_views }}</p>
-    <a class="p-2 btn btn-outline-danger" href="{% url 'blog:article_delete' %}">Удалить статью</a>
+    <a href="{% url 'blog:article_list' %}" class="btn btn-primary">Назад</a>
+    <a class="p-2 btn btn-outline-danger" href="{% url 'blog:article_delete' object.id %}">Удалить</a>
 {% endblock %}

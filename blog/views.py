@@ -22,17 +22,17 @@ class ArticleCreateView(CreateView):
     model = Article
     template_name = 'blog/article_form.html'
     fields = ('title', 'content', 'image')
-    success_url = reverse_lazy('blog: article_list')
+    success_url = reverse_lazy('blog:article_list')
 
 
 class ArticleUpdateView(UpdateView):
     model = Article
     template_name = 'blog/article_form.html'
     fields = ('title', 'content', 'image')
-    success_url = reverse_lazy('blog: article_list')
+    success_url = reverse_lazy('blog:article_list')
 
 
 class ArticleDeleteView(DeleteView):
     model = Article
     template_name = 'blog/article_confirm_delete.html'
-    success_url = reverse_lazy('blog: article_list')
+    success_url = reverse_lazy('blog:article_list')

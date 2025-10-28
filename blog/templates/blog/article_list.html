@@ -19,6 +19,7 @@
                                 <li class="list-group-item"><img src="{{ article.image.url }}" alt="{{ article.title }}"></li>
                                 <li class="list-group-item">Содержание статьи - {{ article.content|truncatechars:100 }}</li>
                                 <li><a class="p-2 btn btn-outline-primary" href="{% url 'blog:article_detail' article.id %}">Подробно</a></li>
+                                <li><a class="p-2 btn btn-outline-danger" href="{% url 'blog:article_delete' article.id %}">Удалить</a></li>
                             </ul>
                         {% endfor %}
                     </div>
