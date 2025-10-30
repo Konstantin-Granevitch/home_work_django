@@ -14,6 +14,10 @@ class Article(models.Model):
     def __str__(self):
         return f"статья - {self.title}, содержание: {self.content}"
 
+    def count_views(self):
+        self.num_views += 1
+        self.save()
+
     class Meta:
         verbose_name = "Статья"
         verbose_name_plural = "Статьи"
