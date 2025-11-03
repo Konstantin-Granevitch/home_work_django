@@ -38,7 +38,7 @@
                                 <li class="list-group-item">Цена товара - {{ product.purchase_price }}</li>
                                 <li class="list-group-item"><img src="{{ product.image.url }}" alt="{{ product.name }}"></li>
                                 <li class="list-group-item">Описание товара: {{ product.description|truncatechars:100 }}</li>
-                                <li><a class="list-group-item" href="{% url 'catalog:product_detail' product.id %}">Подробно</a></li>
+                                <li><a class="p-2 btn btn-outline-primary" href="{% url 'catalog:product_detail' product.id %}">Подробно</a></li>
                             </ul>
                         {% endfor %}
                     </div>

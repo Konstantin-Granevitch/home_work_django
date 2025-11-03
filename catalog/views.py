@@ -1,35 +1,40 @@
 from django.shortcuts import render
 from django.http import HttpResponse
+from django.views.generic import DetailView
+from django.views import View
+
 from .models import Product
 
 
-def home_view(request):
-    """функция-контроллер для вывода домашней страницы приложения каталог"""
+class HomeView(View):
+    """контроллер для вывода домашней страницы приложения каталог со списком продуктов"""
 
-    product_list = Product.objects.all()
-    context = {'product_list': product_list}
-
-    if request.method == "GET":
+    def get(self, request):
+        product_list = Product.objects.all()
+        context = {'product_list': product_list}
         return render(request, "catalog/home.html", context)
 
 
-def contacts_view(request):
-    """функция-контроллер для вывода страницы с контактами приложения каталог"""
+class ContactsView(View):
+    """контроллер для вывода страницы с контактами приложения каталог"""
 
-    if request.method == "GET":
+    def get(self, request):
         return render(request, "catalog/contacts.html")
 
-    if request.method == "POST":
+    def post(self, request):
         user_name = request.POST.get("name")
         user_phone = request.POST.get("phone")
         user_message = request.POST.get("message")
         return HttpResponse(f"Запрос успешно выполнен, данные пользователя: {user_name}, {user_phone}, {user_message}")
 
 
-def product_detail(request, product_id):
+class ProductDetailView(DetailView):
     """контроллер для вызова страницы с описанием товара"""
 
-    product = Product.objects.get(id=product_id)
-    context = {'product': product}
+    model = Product
+    template_name = 'catalog/product_detail.html'
+    context_object_name = 'product_list'
 
-    return render(request, 'catalog/product_detail.html', context)
+    def get_object(self, queryset=None):
+        obj = super().get_object(queryset)
+        return obj

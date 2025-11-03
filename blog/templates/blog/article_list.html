@@ -1,0 +1,30 @@
+{% extends 'blog/base.html' %}
+{% block content %}
+    <div class="pricing-header px-3 py-3 pt-md-5 pb-md-4 mx-auto text-center">
+        <h1 class="display-4">Блог</h1>
+    </div>
+
+    <div class="container">
+        <div class="row text-center">
+            <div class ="col-12">
+                <div class="card mb-4 box-shadow">
+                    <div class="card-header">
+                        <h4 class="my-0 font-weight-normal">Список статей</h4>
+                        <a class="p-2 btn btn-outline-secondary" href="{% url 'blog:article_create' %}">Добавить статью</a>
+                    </div>
+                    <div class="card-body">
+                        {% for article in article_list %}
+                            <ul class="list">
+                                <li class="list-group-item">Заголовок статьи - {{ article.title }}</li>
+                                <li class="list-group-item"><img src="{{ article.image.url }}" alt="{{ article.title }}"></li>
+                                <li class="list-group-item">Содержание статьи - {{ article.content|truncatechars:100 }}</li>
+                                <li><a class="p-2 btn btn-outline-primary" href="{% url 'blog:article_detail' article.id %}">Подробно</a></li>
+                                <li><a class="p-2 btn btn-outline-danger" href="{% url 'blog:article_delete' article.id %}">Удалить</a></li>
+                            </ul>
+                        {% endfor %}
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+{% endblock %}

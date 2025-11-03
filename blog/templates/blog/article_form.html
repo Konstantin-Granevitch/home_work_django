@@ -1,0 +1,29 @@
+{% extends 'blog/base.html' %}
+{% block content %}
+    <div class="pricing-header px-3 py-3 pt-md-5 pb-md-4 mx-auto text-center">
+        <h1 class="display-4">Блог</h1>
+    </div>
+
+    <div class="container">
+        <div class="row text-center">
+            <div class ="col-12">
+                <div class="card mb-4 box-shadow">
+                    <div class="card-header">
+                        <h4 class="my-0 font-weight-normal">Новая статья</h4>
+                    </div>
+
+                    <div class="card-body">
+                        <form class="row" method="post" enctype="multipart/form-data">
+                            {% csrf_token %}
+                            {{ form.as_p }}
+                            <div class="coll-6">
+                                <button type="submit" class="btn btn-lg btn-block btn-outline-success">Сохранить</button>
+                                <a class="p-2 btn btn-outline-danger" href="{% url 'blog:article_list' %}">Отменить</a>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+{% endblock %}

@@ -1,3 +1,14 @@
+[tool.poetry]
+name = "home_work_django"
+version = "0.1.0"
+description = ""
+authors = ["Konstantin <ваш@email.com>"]
+readme = "README.md"
+
+[tool.poetry.dependencies]
+python = "^3.10" # Укажите вашу версию Python
+
+
 [project]
 name = "home-work-django"
 version = "0.1.0"
