@@ -8,5 +8,6 @@
     <p>Количество просмотров: {{ article.num_views }}</p>
     <a href="{% url 'blog:article_list' %}" class="btn btn-primary">Назад</a>
     <a class="p-2 btn btn-outline-secondary" href="{% url 'blog:article_update' article.id %}">Изменить статью</a>
+    <a class="p-2 btn btn-outline-success" href="{% url 'blog:article_publicate' article.id %}">Опубликовать статью</a>
     <a class="p-2 btn btn-outline-danger" href="{% url 'blog:article_delete' article.id %}">Удалить</a>
 {% endblock %}

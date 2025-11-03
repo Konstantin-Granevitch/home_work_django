@@ -15,8 +15,11 @@ class Article(models.Model):
         return f"статья - {self.title}, содержание: {self.content}"
 
     def count_views(self):
+        """метод-счетчик для подсчета колличества просмотров"""
+
         self.num_views += 1
         self.save()
+
 
     class Meta:
         verbose_name = "Статья"
